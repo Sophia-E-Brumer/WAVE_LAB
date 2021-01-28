@@ -1,0 +1,318 @@
+
+                   *** WAVEWATCH III Grid preprocessor ***    
+               ===============================================
+
+  Comment character is '$'
+
+  Grid name : HOMOGENEOUS SOURCE TERM TEST  
+
+
+  Spectral discretization : 
+ --------------------------------------------------
+       Number of directions        :  36
+       Directional increment (deg.):  10.0
+       First direction       (deg.):   0.0
+       Number of frequencies       :  36
+       Frequency range        (Hz) :   0.0340-0.9555
+       Increment factor            :   1.100
+
+
+  Model definition :
+ --------------------------------------------------
+       Dry run (no calculations)   :  ---/NO
+       Propagation in X-direction  :  ---/NO
+       Propagation in Y-direction  :  ---/NO
+       Refraction                  :  ---/NO
+       Current-induced k-shift     :  ---/NO
+       Source term calc. and int.  :  YES/--
+
+
+  Time steps : 
+ --------------------------------------------------
+       Maximum global time step      (s) :  900.00
+       Maximum CFL time step X-Y     (s) :  900.00
+       Maximum CFL time step k-theta (s) :  900.00
+       Minimum source term time step (s) :    1.00
+
+  Preprocessing namelists ...
+  Preprocessing namelists finished.
+
+
+  Linear input (C&M-R 82) (default values) :  
+ --------------------------------------------------
+       CLIN                        :   80.00
+       Factor for fPM in filter    :    1.00
+       Factor for fh in filter     :    0.50
+
+
+  Wind input (WAM 4+) (default values) :  
+ --------------------------------------------------
+       minimum Charnock coeff.     :    0.0095
+       betamax                     :    1.200
+       power of cos. in wind input :    2.000
+       z0max                       :    0.000
+       zalp                        :    0.011
+       Height of input wind (m)    :   10.00
+       swell attenuation factor    :    0.000
+
+
+  Nonlinear interactions (DIA) (default values) :  
+ --------------------------------------------------
+       Lambda                      :    0.25
+       Prop. constant              : 0.278E+08
+       kd conversion factor        :    0.75
+       minimum kd                  :    0.50
+       shallow water constants     :    5.50  0.83 -1.25
+
+
+ Dissipation (WAM Cycle 4+) (default values) :  
+ --------------------------------------------------
+       SDSC1                       : -0.210E+01
+       Power of k in mean k        :    0.50
+       weights of k and k^2        :    0.400 0.600
+
+
+  Bottom friction  (SHOWEX)  
+
+  Bottom friction  (SHOWEX)  (default values) :  
+ --------------------------------------------------
+       SEDMAPD50, SED_D50_UNIFORM        :  F 0.000200
+       RIPFAC1,RIPFAC2,RIPFAC3,RIPFAC4   :  0.4000 -2.5000  1.2000  0.0500
+       SIGDEPTH, BOTROUGHMIN, BOTROUGHFAC:  0.0500  0.0100  1.0000
+
+
+  Surf breaking (B&J 1978) (default values) :  
+ --------------------------------------------------
+       alpha                       :   1.000
+       gamma                       :   0.730
+       Using Hmax/d ratio only.
+
+
+  Triad interactions not defined.
+
+
+  Bottom scattering not defined.
+
+
+  Dissipation via ice parameters (SIC2).
+ --------------------------------------------------
+    Sice will be calculated using under-ice boundary layer method.
+        Required field input: ice parameters 1 and 2.
+
+  Propagation scheme : 
+ --------------------------------------------------
+
+ *** WAVEWATCH III WARNING IN W3GRID :
+     NO PROPAGATION REQUESTED BUT SCHEME SELECTED 
+
+       Type of scheme (structured) : 3rd order UQ + GSE averaging  
+                                     (default values)  
+       CFLmax depth refraction     :    0.700
+       Averaging area factor Cg    :    1.50
+       Averaging area factor theta :    1.50
+
+
+  Ice scattering (default values) :  
+ --------------------------------------------------
+  &SIS2 ISC1 =0.100E+01, IS2BACKSCAT =0.100E+01, IS2ISOSCAT =  T, IS2BREAK =  F, IS2DUPDATE =  T,
+       IS2FLEXSTR =  0.274E+06, IS2DISP =  F, IS2DAMP =0.0, IS2FRAGILITY =0.90, IS2DMIN =20.00,
+       IS2C2 =  0.00000000, IS2C3 =  0.0000, IS2CONC =  0.0, IS2CREEPB =  0.200E+08,
+       IS2CREEPC = 0.40, IS2CREEPD = 0.50, IS2CREEPN = 3.00,
+       IS2BREAKE = 1.00, IS2BREAKF = 3.60, IS2WIM1 = 1.00,
+, IS2ANDISB =  T, IS2ANDISE = 0.55, IS2ANDISD =  0.200E-08, IS2ANDISN= 1.00 /
+
+  Shoreline reflection     (default values) :  
+ --------------------------------------------------
+
+  Second order and infragravity waves  (default values) :  
+ --------------------------------------------------
+
+  Boundary layer below ice  (default values) :  
+ --------------------------------------------------
+
+  Spectral output on full grid (default values) :  
+ --------------------------------------------------
+       Second order pressure at K=0:   0   1  15
+       Spectrum of Uss             :   0   1  36
+       Frequency spectrum          :   0   1  36
+       Partions of Uss             :   0   1
+       Partition wavenumber # 1   :  0.063
+
+  Miscellaneous (default values) :  
+ --------------------------------------------------
+       Ice concentration cut-offs  :    0.50  0.50
+       Wind input reduction factor in presence of 
+         ice :  1.00
+         (0.0==> no reduction and 1.0==> no wind
+         input with 100% ice cover)
+       Space-time extremes DX-Y set to default 1000 m
+       Space-time extremes Dt set to default 1200 s
+ Grid offset for multi-grid w/SCRIP  :   0.000E+00
+       Compression of track output  :   T
+
+    Dynamic source term integration scheme :
+       Xp                      (-) :    0.150
+       Xr                      (-) :    0.100
+       Xfilt                   (-) :    0.050
+
+    Wave field partitioning :
+       Levels                  (-) :  100
+       Minimum wave height     (m) :    0.050
+       Wind area multiplier    (-) :    1.700
+       Cut-off wind sea fract. (-) :    0.333
+       Combine wind seas           :  YES/--
+       Number of swells in fld out :    5
+       Partitioning method         :  WW3 default                                  
+
+    Miche-style limiting wave height :
+       Hs,max/d factor         (-) :    1.600
+       Hrms,max/d factor       (-) :    1.131
+       Limiter activated           :  YES/--
+
+
+  Equivalent namelists ...
+
+  &SLN1 CLIN =  80.0, RFPM =  1.00, RFHF =  0.50 /
+  &SIN3 ZWND = 10.0, ALPHA0 = 0.00950, Z0MAX = 0.00000, BETAMAX = 1.20000,
+        SINTHP = 2.00000, ZALP = 0.01100,
+        SWELLF = 0.00000R /
+
+  &SNL1 LAMBDA =  0.250, NLPROP = 0.278E+08, KDCONV =  0.750, KDMIN =  0.500,
+        SNLCS1 =  5.500, SNLCS2 =  0.833, SNLCS3 =  -1.250 /
+  &SDS3 SDSC1 = -0.2100E+01, WNMEANP =0.50, FXPM3 =4.00,FXFM3 =2.50, 
+        SDSDELTA1 = 0.40, SDSDELTA2 = 0.60 /
+  &SBT4 SEDMAPD50 =  F, SED_D50_UNIFORM =0.000200,
+        RIPFAC1 =  0.4000, RIPFAC2 = -2.5000, RIPFAC3 =  1.2000, RIPFAC4 =  0.0500,
+        SIGDEPTH =  0.0500, BOTROUGHMIN =  0.0100, BOTROUGHFAC = 1.0 /
+  &SDB1 BJALFA =  1.000, BJGAM =  0.730, BJFLAG = .TRUE. /
+  &PRO3 CFLTM = 0.70, WDTHCG = 1.50, WDTHTH = 1.50 /
+  &UNST UGOBCAUTO =  T, UGOBCDEPTH = -10.000, UGOBCFILE=unset,
+,  EXPFSN =  T,EXPFSPSI =  F,  EXPFSFCT =  F,IMPFSN =  F,EXPTOTAL=  F,  IMPTOTAL=  F,IMPREFRACTION=  F,  IMPFREQSHIFT=  F, IMPSOURCE=  F,  SETUP_APPLY_WLV=  F,  JGS_TERMINATE_MAXITER=  T,  JGS_TERMINATE_DIFFERENCE=  T,  JGS_TERMINATE_NORM=  F,  JGS_LIMITER=  F,  JGS_USE_JACOBI=  T,  JGS_BLOCK_GAUSS_SEIDEL=  T,  JGS_MAXITER=  100,  JGS_PMIN=   1.000,  JGS_DIFF_THR=   0.000,  JGS_NORM_THR=   0.000,  JGS_NLEVEL=  0,  JGS_SOURCE_NONLINEAR=  F
+
+  &OUTS P2SF  = 0, I1P2SF = 1, I2P2SF = 15,
+        US3D  = 0, I1US3D =  1, I2US3D = 36,
+        USSP  = 0, IUSSP  =  1,
+        E3D   = 0, I1E3D  =  1, I2E3D  = 36,
+        TH1MF = 0, I1TH1M =  1, I2TH1M = 36,
+        STH1MF= 0, I1STH1M=  1, I2STH1M= 36,
+        TH2MF = 0, I1TH2M =  1, I2TH2M = 36,
+        STH2MF= 0, I1STH2M=  1, I2STH2M= 36 /
+  &REF1 REFCOAST = 0.00, REFFREQ = 0.00, REFSLOPE =0.220, REFMAP = 0.0, REFMAPD = 0.0, REFSUBGRID = 0.00,
+        REFRMAX= 1.00, REFFREQPOW = 2.00, REFICEBERG = 0.00, REFCOSP_STRAIGHT = 4.0 /
+  &REF1 REFCOAST = 0.00, REFFREQ =
+  &SIG1  IGMETHOD = 2, IGADDOUTP = 0, IGSOURCE = 2, IGSTERMS =  0, IGBCOVERWRITE =  T,
+        IGSWELLMAX =  T, IGMAXFREQ =0.0300, IGSOURCEATBP =  0, IGKDMIN = 1.1000,
+        IGFIXEDDEPTH =   0.00, IGEMPIRICAL = 0.001250 /
+  &SIC2  IC2DISPER =  F, IC2TURB =  1.00, IC2ROUGH  =  0.010000,
+        IC2REYNOLDS =   150000.0, IC2SMOOTH =   200000.0, IC2VISC = 1.000,
+,       IC2TURBS =    0.00, IC2DMAX =0.000 /
+  IS2 Scattering ... 
+        scattering coefficient       : 0.100E+01
+        0: no back-scattering        : 0.100E+01
+     TRUE: istropic back-scattering  :   T
+     TRUE: update of ICEDMAX         :   F
+     TRUE: keeps updated ICEDMAX     :   T
+        flexural strength            : 0.274E+06
+     TRUE: uses Robinson-Palmer disp.:   F
+        attenuation                  :  0.00
+        fragility                    :  0.90
+        minimum floe size in meters  : 20.00
+        pack scattering coef 1       :  0.00
+        pack scattering coef 2       :  0.00
+        scaling by concentration     :  0.00
+        creep B coefficient          : 0.200E+08
+        creep C coefficient          :  0.40
+        creep D coefficient          :  0.50
+        creep N power                :  3.00
+        elastic energy factor        :  1.00
+        factor for ice breakup       :  3.60
+        IS2WIM1                      :  1.00
+        anelastic dissipation        :   T
+        energy of activation         :  0.55
+        anelastic coefficient        :   0.200E-08
+        anelastic exponent           :  1.00
+  &MISC CICE0 = 0.500, CICEN = 0.500, LICE =      0.0, PMOVE = 0.500,
+        XSEED = 1.000, FLAGTR = 0, XP = 0.150, XR = 0.100, XFILT = 0.050
+        IHM =  100, HSPM = 0.050, WSM = 1.700, WSC = 0.333, FLC = .TRUE.
+        NOSW =  5, FMICHE = 1.600, RWNDC = 1.000, WCOR1 = 99.00, WCOR2 =  0.00,
+        FACBERG = 1.0, GSHIFT =   0.000E+00, STDX =   -1.00, STDY =  -1.00,
+        STDT =   -1.00, ICEHMIN = 0.20, ICEHFAC = 1.00,
+        ICEHINIT = 0.50, ICEDISP =  F, ICEHDISP = 0.60,
+        ICESLN =   1.00, ICEWIND =   1.00, ICESNL =   1.00, ICESDS =  1.00,
+        ICEDDISP = 80.00, ICEFDISP =  2.00, NOLEAP =   F , TRCKCMPR =   T,
+        BTBET  =   1.20 /
+
+  Equivalent namelists finished.
+
+
+  The spatial grid: 
+ --------------------------------------------------
+
+       Grid type                   : rectilinear
+       Coordinate system           : spherical
+       Index closure type          : none
+       Dimensions                  :      3       3
+
+       Increments           (deg.) :  100.0000  100.0000
+       Longitude range      (deg.) : -100.0000  100.0000
+       Latitude range       (deg.) : -100.0000  100.0000
+
+       Bottom level unit           :    10
+       Limiting depth          (m) :   -5.00
+       Minimum depth           (m) :    5.75
+       Scale factor                :-2500.00
+       Layout indicator            :     3
+       Format indicator            :     1
+
+       Sub-grid information        : Not available.
+  Processing boundary points
+  Processing excluded points
+
+  Input boundary points : 
+ --------------------------------------------------
+       No boundary points.
+
+
+  Excluded points : 
+ --------------------------------------------------
+       Number of excluded points   :     8
+
+
+  Status map, printed in     1 part(s) 
+ -----------------------------------
+
+   3 3 3
+   3 1 3
+   3 3 3
+  
+  Legend : 
+ -----------------------------
+    0 : Land point            
+    1 : Sea point             
+    2 : Active boundary point 
+    3 : Excluded point        
+
+
+  Output boundary points : 
+ --------------------------------------------------
+       No boundary points.
+
+
+  Writing model definition file ...
+
+
+  Summary grid statistics : 
+ --------------------------------------------------
+       Number of longitudes      :         3
+       Number of latitudes       :         3
+       Number of grid points     :         9
+       Number of sea points      :         1 (11.1%)
+       Number of input b. points :         0
+       Number of land points     :         0
+       Number of excluded points :         8
+
+
+  End of program 
+ ========================================
+         WAVEWATCH III Grid preprocessor 
+

@@ -1,0 +1,43 @@
+$ WAVEWATCH III Grid preprocessor input file
+$ ------------------------------------------
+  'HOMOGENEOUS SOURCE TERM TEST  '
+$
+   1.10  0.034  36  36  0.
+$   1.10  0.042  40  72  0.
+$  1.07  0.042  56  72  0.
+$
+   F F F F F T
+$ 900.  900.  900.  5.
+  900.  900.  900.  1.
+$ 900.  900.  900. 60.
+$
+$ &MISC  XP = 0.025 /
+$ &FLX3  CDMAX = 2.5E-3, CTYPE = 1 /
+$ &SLN1  RFPM = 1.0 RFHF = 0.33 /
+$  &MISC  XP = 0.075 /
+ &SIN4 SINTHP=1, TAUWSHELTER =0 /
+ &SDS4 FXFM3 = 8, 
+  SDSSTRAIN =0, SDSSTRAINA =15, SDSSTRAIN2 =20 /
+$ &SIN4 BETAMAX = 1.6, TAUWSHELTER = 0.3, SINTHP=1 /
+$ &SDS4 SDSC1 = -0.2200E-04, SDSC5 = 1,  FXFM3 = 5, 
+$  SDSSTRAIN =0, SDSSTRAINA =15, SDSSTRAIN2 =30 /
+END OF NAMELISTS
+$
+  'RECT' T 'NONE'
+   3   3
+   1.  1.  1.E-2
+  -1. -1.  1.E-2
+$
+  -5. 5.75  10  -2500. 3 1 '(....)' 'UNIT' 'input'
+$
+   1  1  1
+   1  1  1
+   1  1  1
+$
+  10  1 1 '(....)' 'PART' 'input'
+$
+   0  0  F
+   0  0  F
+   0  0
+$
+   0. 0. 0. 0.  0
