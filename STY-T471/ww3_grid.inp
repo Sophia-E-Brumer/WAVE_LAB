@@ -1,0 +1,64 @@
+$ WAVEWATCH III Grid preprocessor input file
+$ ------------------------------------------
+  'HOMOGENEOUS SOURCE TERM TEST  '
+$
+   1.10  0.034  36  24  0.
+$   1.10  0.042  40  72  0.
+$  1.07  0.042  56  72  0.
+$
+   F F F F F T
+  900.  900.  900.  1.
+$
+$ &MISC  XP = 0.025 /
+$ &FLX3  CDMAX = 2.5E-3, CTYPE = 1 /
+$ &SLN1  RFPM = 1.0 RFHF = 0.33 /
+$  &MISC  XP = 0.075 /
+$
+$ T471
+$ &SIN4 SINTHP=1, BETAMAX = 1.5 / 
+$ T475
+ &SIN4 SINTHP=1, BETAMAX = 1.75, TAUWSHELTER =0.3, ALPHA0 = 0.0090,
+     SWELLF4 = 115000.0, SWELLF7 = 432000.00  /
+$ &SDS4 FXFM3 = 2.5 /
+$
+$ T600x 
+$ &SIN4 BETAMAX = 1.8, TAUWSHELTER = 0.3, SINTHP=1 /
+$ &SDS4 SDSC2 = -0.2200E-04, SDSC5 = 1,  FXFM3 = 4, 
+$  SDSSTRAIN =0, SDSSTRAINA =15, SDSSTRAIN2 =30 /
+$
+$ T700
+$ &SDS4 SDSBCHOICE=3, SDSC2 = -2.6, SDSBR = 0.005, 
+$       SDSSTRAIN =0., SDSSTRAIN2 = 0., FXFM3 = 20., SDSFACMTF = 400., 
+$       SDSCUM=0., SDSC5 =0. /
+$ T706
+$ &SIN4 SINTHP=1 /
+$ &SDS4 SDSBCHOICE=3, SDSC2 = -3.8, SDSBR = 0.005, FXFM3 = 20., 
+$       SDSSTRAIN =0., SDSSTRAINA =20, SDSSTRAIN2 = 400, SDSFACMTF = 1., 
+$       SDSCUM=0., SDSC5 =0., SDSCUMP=2., SDSNUW = 0./   
+$ SDSNUW = 1.5E-6 /  
+$ SDSSTRAINA =20, SDSSTRAIN2 = 300, SDSFACMTF = 100., 
+
+$ T701
+$ &SDS4 SDSBCHOICE=3, SDSC2 = -3.8, SDSBR = 0.005, 
+$       SDSSTRAIN =0.1, SDSSTRAINA =15, SDSSTRAIN2 = 110., FXFM3 = 20., 
+$       SDSFACMTF = 0., SDSCUM=0., SDSC5 =0. /
+END OF NAMELISTS
+$
+  'RECT' T 'NONE'
+   3   3
+   1.  1.  1.E-2
+  -1. -1.  1.E-2
+$
+  -5. 5.75  10  -2500. 3 1 '(....)' 'UNIT' 'input'
+$
+   1  1  1
+   1  1  1
+   1  1  1
+$
+  10  1 1 '(....)' 'PART' 'input'
+$
+   0  0  F
+   0  0  F
+   0  0
+$
+   0. 0. 0. 0.  0
