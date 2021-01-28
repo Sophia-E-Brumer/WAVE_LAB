@@ -1,0 +1,79 @@
+
+                   *** WAVEWATCH III Grid preprocessor ***    
+               ===============================================
+
+  Comment character is '$'
+
+  Grid name : HOMOGENEOUS SOURCE TERM TEST  
+
+
+  Spectral discretization : 
+ --------------------------------------------------
+       Number of directions        :  24
+       Directional increment (deg.):  15.0
+       First direction       (deg.):   0.0
+       Number of frequencies       :  36
+       Frequency range        (Hz) :   0.0340-0.9555
+       Increment factor            :   1.100
+
+
+  Model definition :
+ --------------------------------------------------
+       Dry run (no calculations)   :  ---/NO
+       Propagation in X-direction  :  ---/NO
+       Propagation in Y-direction  :  ---/NO
+       Refraction                  :  ---/NO
+       Current-induced k-shift     :  ---/NO
+       Source term calc. and int.  :  YES/--
+
+
+  Time steps : 
+ --------------------------------------------------
+       Maximum global time step      (s) :  900.00
+       Maximum CFL time step X-Y     (s) :  900.00
+       Maximum CFL time step k-theta (s) :  900.00
+       Minimum source term time step (s) :    5.00
+
+  Preprocessing namelists ...
+  Preprocessing namelists finished.
+
+
+  Linear input (C&M-R 82) (default values) :  
+ --------------------------------------------------
+       CLIN                        :   80.00
+       Factor for fPM in filter    :    1.00
+       Factor for fh in filter     :    0.50
+
+
+  Wind input (WAM 4+) (default values) :  
+ --------------------------------------------------
+       minimum Charnock coeff.     :    0.0095
+       betamax                     :    1.430
+       power of cos. in wind input :    2.000
+       z0max                       :    0.000
+       zalp                        :    0.006
+       Height of input wind (m)    :   10.00
+       wind stress sheltering      :    0.300
+       swell attenuation param.    :    1
+       swell attenuation factor    :    0.660
+       swell attenuation factor2   :   -0.018
+       swell attenuation factor3   :    0.022
+       critical Reynolds number    : 150000.0
+       swell attenuation factor5   :    1.200
+       swell attenuation factor6   :    0.000
+       swell attenuation factor7   :    360000.000
+       ratio of z0 for orb. & mean :    0.040
+
+
+  Nonlinear interactions (DIA) (default values) :  
+ --------------------------------------------------
+       Lambda                      :    0.25
+       Prop. constant              : 0.250E+08
+       kd conversion factor        :    0.75
+       minimum kd                  :    0.50
+       shallow water constants     :    5.50  0.83 -1.25
+
+
+ *** WAVEWATCH III ERROR IN READNL : 
+     ERROR IN READING SDS4  IOSTAT =    5010
+
